@@ -56,7 +56,7 @@ class IdentitiesTableViewController: UITableViewController, WebBrowserDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Controller().openDappBrowser(url: URL(string: "https://o3.app/" + nnsNames[indexPath.row])!, modal: true)
+        //Controller().openDappBrowser(url: URL(string: "https://o3app.net/" + nnsNames[indexPath.row])!, modal: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

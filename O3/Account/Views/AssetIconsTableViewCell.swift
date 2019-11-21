@@ -31,7 +31,7 @@ class AssetIconsTableViewCell: UITableViewCell {
             v.removeFromSuperview()
         }
         for i in list! {
-            let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png",i.symbol.uppercased())
+            let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png",i.symbol.uppercased())
             KingfisherManager.shared.retrieveImage(with: URL(string: imageURL)!, options: [], progressBlock: nil) { image, _, _, _  in
                 let imageView = UIImageView(image: image)
                 imageView.widthAnchor.constraint(equalToConstant: 16).isActive = true

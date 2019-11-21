@@ -338,6 +338,8 @@
 		75E14E541F7D27F900BEAE22 /* O3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75E14E521F7D27F900BEAE22 /* O3.xcdatamodeld */; };
 		75E14E571F7D2AEC00BEAE22 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E14E561F7D2AEC00BEAE22 /* UIApplication.swift */; };
 		75E28F311F9B3B34006C6E37 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E28F301F9B3B34006C6E37 /* ThemeManager.swift */; };
+		B513A92523867C05002E4E29 /* CommonUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B513A92423867C05002E4E29 /* CommonUISDK.framework */; };
+		B513A92623867C05002E4E29 /* CommonUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B513A92423867C05002E4E29 /* CommonUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,6 +372,7 @@
 			files = (
 				354013A522BC847D00AB11ED /* ZendeskSDK.framework in Embed Frameworks */,
 				354013A622BC847D00AB11ED /* ZendeskCoreSDK.framework in Embed Frameworks */,
+				B513A92623867C05002E4E29 /* CommonUISDK.framework in Embed Frameworks */,
 				354013A722BC847D00AB11ED /* ZendeskProviderSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -721,6 +724,7 @@
 		75E14E531F7D27F900BEAE22 /* O3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = O3.xcdatamodel; sourceTree = "<group>"; };
 		75E14E561F7D2AEC00BEAE22 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		75E28F301F9B3B34006C6E37 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		B513A92423867C05002E4E29 /* CommonUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonUISDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -752,6 +756,7 @@
 				3540138D22BC7E9000AB11ED /* AutoInsetter.framework in Frameworks */,
 				3540138E22BC7E9000AB11ED /* Crashlytics.framework in Frameworks */,
 				3540138F22BC7E9000AB11ED /* Cache.framework in Frameworks */,
+				B513A92523867C05002E4E29 /* CommonUISDK.framework in Frameworks */,
 				3540136C22BC7E8E00AB11ED /* ScrollableGraphView.framework in Frameworks */,
 				3540136D22BC7E8E00AB11ED /* Reachability.framework in Frameworks */,
 				3540136E22BC7E8E00AB11ED /* Lottie.framework in Frameworks */,
@@ -1374,6 +1379,7 @@
 		755D8F5E1F66743900058434 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B513A92423867C05002E4E29 /* CommonUISDK.framework */,
 				3540137322BC7E8E00AB11ED /* ActiveLabel.framework */,
 				3540137722BC7E8F00AB11ED /* Amplitude.framework */,
 				3540137D22BC7E8F00AB11ED /* AutoInsetter.framework */,

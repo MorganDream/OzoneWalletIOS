@@ -55,7 +55,7 @@ class DappDisclaimerViewController: UIViewController {
             label.text = "O3 app browser allows you connect with various dAPPs with your O3 Wallet. O3 is not responsible for any content related to third party apps. For more info please read our Terms of service"
             label.theme_textColor = O3Theme.lightTextColorPicker
             label.customColor = [ActiveType.custom(pattern: "\\Terms of service\\b"): Theme.light.primaryColor]
-            label.handleCustomTap(for: ActiveType.custom(pattern: "\\Terms of service\\b"), handler: { url in UIApplication.shared.openURL(URL(string: "https://o3.network/privacy")!) })
+            label.handleCustomTap(for: ActiveType.custom(pattern: "\\Terms of service\\b"), handler: { url in UIApplication.shared.openURL(URL(string: "https://testo3.net/privacy")!) })
         }
             
         checkboxDescription.text = "Don't show this again"

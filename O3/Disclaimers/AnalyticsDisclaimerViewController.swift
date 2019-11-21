@@ -49,7 +49,7 @@ class AnaylticsDisclaimerViewController: UIViewController {
             label.text = "O3 tracks crash reports and usage statistics in order to improve its products. This data does not identify you, the user, by address or in any other identifiable way. By using this application you consent O3 to collect this info. For more info please read our Terms of Service"
             label.theme_textColor = O3Theme.lightTextColorPicker
             label.customColor = [ActiveType.custom(pattern: "\\Terms of service\\b"): Theme.light.primaryColor]
-            label.handleCustomTap(for: ActiveType.custom(pattern: "\\Terms of service\\b"), handler: { url in UIApplication.shared.openURL(URL(string: "https://o3.network/privacy")!) })
+            label.handleCustomTap(for: ActiveType.custom(pattern: "\\Terms of service\\b"), handler: { url in UIApplication.shared.openURL(URL(string: "https://testo3.net/privacy")!) })
         }
         
         checkboxDescription.text = "Don't show this again"

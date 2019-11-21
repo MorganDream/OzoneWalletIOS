@@ -189,7 +189,7 @@ class dAppBrowserV2ViewController: UIViewController {
         
         var req = URLRequest(url: self.viewModel.url)
         dapiEvent.shared.dappOpened(url: self.viewModel.url.absoluteString, domain: self.viewModel.url.host ?? "")
-        if (viewModel.url?.absoluteString.hasPrefix("https://o3.app")) == true {
+        if (viewModel.url?.absoluteString.hasPrefix("https://o3app.net")) == true {
             let queryItems = [NSURLQueryItem(name: "dark", value: UserDefaultsManager.themeIndex == 0 ? "false" : "true"),
             NSURLQueryItem(name: "hide", value: "true")]
             let urlComps = NSURLComponents(url: viewModel.url!, resolvingAgainstBaseURL: false)!
@@ -386,7 +386,7 @@ extension dAppBrowserV2ViewController: WKNavigationDelegate {
         if UserDefaultsManager.theme == .dark {
             theme = "Dark Mode"
         }
-        self.event(eventName: "READY", data: ["name": "o3", "version": "v2", "website": "https://o3.network", "compatibility": ["NEP-dapi", "PAY"], "theme": theme])
+        self.event(eventName: "READY", data: ["name": "o3", "version": "v2", "website": "https://testo3.net", "compatibility": ["NEP-dapi", "PAY"], "theme": theme])
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {

@@ -36,13 +36,13 @@ class ExploreTabViewController: TabmanViewController, PageboyViewControllerDataS
         }
         
         if AppState.network == .test {
-            exploreHomeViewController.urlString = "https://testnet.o3.app/?hide=true&\(themeString)"
-            exploreDappsViewController.urlString = "https://testnet.o3.app/dapps?hide=true&\(themeString)"
-            exploreAssetsViewController.urlString = "https://testnet.o3.app/assets?hide=true&\(themeString)"
+            exploreHomeViewController.urlString = "https://testnet.o3app.net/?hide=true&\(themeString)"
+            exploreDappsViewController.urlString = "https://testnet.o3app.net/dapps?hide=true&\(themeString)"
+            exploreAssetsViewController.urlString = "https://testnet.o3app.net/assets?hide=true&\(themeString)"
         } else {
-            exploreHomeViewController.urlString = "https://o3.app/?hide=true&\(themeString)"
-            exploreDappsViewController.urlString = "https://o3.app/dapps?hide=true&\(themeString)"
-            exploreAssetsViewController.urlString = "https://o3.app/assets?hide=true&\(themeString)"
+            exploreHomeViewController.urlString = "https://o3app.net/?hide=true&\(themeString)"
+            exploreDappsViewController.urlString = "https://o3app.net/dapps?hide=true&\(themeString)"
+            exploreAssetsViewController.urlString = "https://o3app.net/assets?hide=true&\(themeString)"
         }
     }
     

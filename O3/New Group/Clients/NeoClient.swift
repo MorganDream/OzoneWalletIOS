@@ -46,7 +46,7 @@ public class NEONetworkMonitor {
     public static func autoSelectBestNode(network: Network) -> String? {
         
         var bestNode = ""
-        //load from https://platform.o3.network/api/v1/nodes instead
+        //load from https://platform.testo3.net/api/v1/nodes instead
         let semaphore = DispatchSemaphore(value: 0)
         O3APIClient(network: network).getNodes { result in
             switch result {
@@ -89,7 +89,7 @@ public class NeoClient {
     
     
     
-    public var seed = "http://seed3.o3node.org:10332"
+    public var seed = "http://seed3.o3node.net:10332"
     
     private init() {}
     private let tokenInfoCache = NSCache<NSString, AnyObject>()

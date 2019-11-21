@@ -89,9 +89,9 @@ class PortfolioAssetCell: UITableViewCell {
 
             var logoURL = ""
             if let walletAsset = asset as? O3WalletNativeAsset {
-                logoURL = String(format: "https://cdn.o3.network/img/neo/%@.png", asset.symbol.uppercased())
+                logoURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", asset.symbol.uppercased())
             } else {
-                logoURL = String(format: "https://cdn.o3.app/img/assets/%@.png", asset.symbol.uppercased())
+                logoURL = String(format: "https://cdn.o3app.net/img/assets/%@.png", asset.symbol.uppercased())
             }
             
             assetIcon.kf.setImage(with: URL(string: logoURL))

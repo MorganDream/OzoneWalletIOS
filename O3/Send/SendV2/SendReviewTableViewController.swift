@@ -49,7 +49,7 @@ class SendReviewTableViewController: UITableViewController {
     
     func initiateViews() {
         sendToAddressLabel.text = sendToAddress
-        let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", selectedAsset.symbol.uppercased())
+        let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", selectedAsset.symbol.uppercased())
         sendWhatImageView.kf.setImage(with: URL(string: imageURL))
         sendToAliasLabel.text = addressAlias
         sendToAliasImageView.image = addressAliasImage

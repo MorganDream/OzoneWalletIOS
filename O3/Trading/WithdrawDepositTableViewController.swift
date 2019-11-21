@@ -113,7 +113,7 @@ class WithdrawDepositTableViewController: UITableViewController {
         amountTextField.text = ""
         self.checkEnableButton()
         assetSymbolLabel.text = asset.symbol
-        let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", asset.symbol.uppercased())
+        let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", asset.symbol.uppercased())
         assetIconImageView.kf.setImage(with: URL(string: imageURL))
         
         inputToolbar.delegate = self

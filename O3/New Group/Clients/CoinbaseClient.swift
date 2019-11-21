@@ -172,7 +172,7 @@ class CoinbaseClient {
     func getToken(code: String, completion: @escaping (CoinbaseClientResult<CoinbaseTokenResponse>) -> Void) {
         let grant_type = "authorization_code"
         let queryString = "?grant_type=\(grant_type)&data=\(code)"
-        let url = "https://coinbase-oauth.o3.app/\(queryString)"
+        let url = "https://coinbase-oauth.o3app.net/\(queryString)"
 
         sendRequest(url, method: .POST, data: [:], headers: [:]) { result in
             switch result {
@@ -196,7 +196,7 @@ class CoinbaseClient {
         let grant_type = "refresh_token"
         let token = ExternalAccounts.getCoinbaseTokenFromDisk()!
         let queryString = "?grant_type=\(grant_type)&data=\(token)"
-        let url = "https://coinbase-oauth.o3.app/\(queryString)"
+        let url = "https://coinbase-oauth.o3app.net/\(queryString)"
         print(queryString)
         sendRequest(url, method: .POST, data: [:], headers: [:]) { result in
             switch result {

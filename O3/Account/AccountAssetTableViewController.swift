@@ -369,14 +369,14 @@ class AccountAssetTableViewController: UITableViewController, ClaimingGasCellDel
             if indexPath.row == 0 {
                 cell.titleLabel.text = "NEO"
                 cell.amountLabel.text = neoBalance.description
-                let imageURL = "https://cdn.o3.network/img/neo/NEO.png"
+                let imageURL = "https://cdn.testo3.net/img/neo/NEO.png"
                 cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
             }
             
             if indexPath.row == 1 {
                 cell.titleLabel.text = "GAS"
                 cell.amountLabel.text = gasBalance.string(8, removeTrailing: true)
-                let imageURL = "https://cdn.o3.network/img/neo/GAS.png"
+                let imageURL = "https://cdn.testo3.net/img/neo/GAS.png"
                 cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
             }
             
@@ -394,7 +394,7 @@ class AccountAssetTableViewController: UITableViewController, ClaimingGasCellDel
             cell.amountLabel.text = token.value.string(token.decimals, removeTrailing: true)
             cell.titleLabel.text = token.symbol
             cell.subtitleLabel.text = token.name
-            let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", token.symbol.uppercased())
+            let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", token.symbol.uppercased())
             cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
             return cell
         }
@@ -417,7 +417,7 @@ class AccountAssetTableViewController: UITableViewController, ClaimingGasCellDel
             cell.amountLabel.text = value.string(token.decimals, removeTrailing: true)
             cell.titleLabel.text = token.symbol
             cell.subtitleLabel.text = token.name
-            let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", token.symbol.uppercased())
+            let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", token.symbol.uppercased())
             cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
             return cell
         }
@@ -433,7 +433,7 @@ class AccountAssetTableViewController: UITableViewController, ClaimingGasCellDel
         cell.amountLabel.text = token.value.string(token.decimals, removeTrailing: true)
         cell.titleLabel.text = token.symbol
         cell.subtitleLabel.text = token.name
-        let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", token.symbol.uppercased())
+        let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", token.symbol.uppercased())
         cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
         return cell
         
@@ -572,7 +572,7 @@ class AccountAssetTableViewController: UITableViewController, ClaimingGasCellDel
         }
         
         tradingEvent.shared.viewTokenDetail(asset: symbol, source: TradingActionSource.o3Account)
-        let urlString = String(format: "https://o3.app/assets/%@/%@", blockchain, symbol)
+        let urlString = String(format: "https://o3app.net/assets/%@/%@", blockchain, symbol)
         Controller().openDappBrowserV2(url: URL(string: urlString)!, assetSymbol: symbol )
     }
     

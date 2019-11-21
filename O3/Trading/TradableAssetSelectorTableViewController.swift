@@ -68,7 +68,7 @@ class TradableAssetSelectorTableViewController: UITableViewController {
         cell.titleLabel.text = token.symbol
         cell.subtitleLabel.text = token.name
         cell.amountLabel.text = token.formattedAmountInString()
-        let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", token.symbol.uppercased())
+        let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", token.symbol.uppercased())
         cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
         return cell
     }

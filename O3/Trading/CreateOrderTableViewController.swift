@@ -43,7 +43,7 @@ protocol CreateOrderDelegate {
 
 extension TradableAsset {
     var imageURL: URL {
-        return URL(string: String(format: "https://cdn.o3.network/img/neo/%@.png", self.symbol.uppercased()))!
+        return URL(string: String(format: "https://cdn.testo3.net/img/neo/%@.png", self.symbol.uppercased()))!
     }
 }
 

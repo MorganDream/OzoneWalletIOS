@@ -50,7 +50,7 @@ import ZendeskProviderSDK
 
     let alertController = UIAlertController(title: OzoneAlert.noInternetError, message: nil, preferredStyle: .alert)
     @objc func reachabilityChanged(_ note: Notification) {
-        switch reachability.connection {
+        switch reachability!.connection {
         case .wifi:
             print("Reachable via WiFi")
             alertController.dismiss(animated: true, completion: nil)
@@ -61,13 +61,16 @@ import ZendeskProviderSDK
         case .none:
             print("Network not reachable")
             UIApplication.shared.keyWindow?.rootViewController?.presentFromEmbedded(alertController, animated: true, completion: nil)
-        }
+        case .unavailable:
+            print("Network not available")
+            UIApplication.shared.keyWindow?.rootViewController?.presentFromEmbedded(alertController, animated: true, completion: nil)
+        }        
     }
-    let reachability = Reachability()!
+    let reachability = try? Reachability()
     func setupReachability() {
         NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(_:)), name: .reachabilityChanged, object: nil)
         do {
-            try reachability.startNotifier()
+            try reachability!.startNotifier()
         } catch {
             print("could not start reachability notifier")
         }
@@ -281,7 +284,7 @@ extension AppDelegate: LoginToNEP6ViewControllerDelegate {
         guard let baseUrl = components.first else {
             return
         }
-        if baseUrl != "o3.app" || components.count < 2 {
+        if baseUrl != "o3app.net" || components.count < 2 {
             return
         }
 

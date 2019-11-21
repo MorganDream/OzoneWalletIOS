@@ -43,7 +43,7 @@ public class NeoScan: NSObject {
         if network == .test {
             baseEndpoint = "https://neoscan-testnet.io/api/test_net"
         } else if network == .privateNet {
-            baseEndpoint = "https://privatenet.o3.network/api/main_net"
+            baseEndpoint = "https://privatenet.testo3.net/api/main_net"
         }
 
         let fullURL = baseEndpoint + endpointResource

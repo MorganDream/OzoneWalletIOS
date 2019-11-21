@@ -96,7 +96,7 @@ class AssetSelectorTableViewController: UITableViewController {
             if indexPath.row == 0 {
                 cell.titleLabel.text = "NEO"
                 cell.amountLabel.text = neoAssets[0].value.string(0, removeTrailing: true)
-                let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", "NEO")
+                let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", "NEO")
                 cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
             }
 
@@ -104,7 +104,7 @@ class AssetSelectorTableViewController: UITableViewController {
             if indexPath.row == 1 {
                 cell.titleLabel.text = "GAS"
                 cell.amountLabel.text = neoAssets[1].value.string(8, removeTrailing: true)
-                let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", "GAS")
+                let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", "GAS")
                 cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
             }
 
@@ -118,7 +118,7 @@ class AssetSelectorTableViewController: UITableViewController {
 
             cell.titleLabel.text = ontologyAssets[indexPath.row].symbol
             cell.amountLabel.text = ontologyAssets[indexPath.row].value.string(ontologyAssets[indexPath.row].decimals, removeTrailing: true)
-            let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", ontologyAssets[indexPath.row].symbol.uppercased())
+            let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", ontologyAssets[indexPath.row].symbol.uppercased())
             cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
 
             return cell
@@ -133,7 +133,7 @@ class AssetSelectorTableViewController: UITableViewController {
         cell.subtitleLabel.text = token.name
         cell.amountLabel.text = token.value.string(token.decimals, removeTrailing: true)
 
-        let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", token.symbol.uppercased())
+        let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", token.symbol.uppercased())
         cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
 
         return cell

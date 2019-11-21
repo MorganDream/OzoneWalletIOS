@@ -228,7 +228,7 @@ public struct Message: Codable {
 extension O3APIClient {
     func subscribeToPush(deviceToken: String, completion: @escaping(O3APIClientResult<Bool>) -> Void) {
         let endpoint = "/\(O3KeychainManager.getO3PubKey()!)/devices"
-        let fullURL = "https://inbox.o3.network/api/v1" + endpoint
+        let fullURL = "https://inbox.testo3.net/api/v1" + endpoint
         
         let timestamp = String(Int(Date().timeIntervalSince1970))
         let objectToSign = PushUnsignedRequest(timestamp: timestamp, platform: "iOS", deviceToken: deviceToken)
@@ -256,7 +256,7 @@ extension O3APIClient {
     
     func subscribeToTopic(topic: String, completion: @escaping(O3APIClientResult<Bool>) -> Void) {
         let endpoint = "/\(O3KeychainManager.getO3PubKey()!)/subscribe"
-        let fullURL = "https://inbox.o3.network/api/v1" + endpoint
+        let fullURL = "https://inbox.testo3.net/api/v1" + endpoint
         
         let timestamp = String(Int(Date().timeIntervalSince1970))
         let objectToSign = NotificationSubscriptionUnsignedRequest(timestamp: timestamp, topic: topic)
@@ -284,7 +284,7 @@ extension O3APIClient {
     
     func unsubscribeToTopic(topic: String, completion: @escaping(O3APIClientResult<Bool>) -> Void) {
         let endpoint = "/\(O3KeychainManager.getO3PubKey()!)/unsubscribe"
-        let fullURL = "https://inbox.o3.network/api/v1" + endpoint
+        let fullURL = "https://inbox.testo3.net/api/v1" + endpoint
         
         let encoder = JSONEncoder()
         encoder.outputFormatting = .sortedKeys
@@ -312,7 +312,7 @@ extension O3APIClient {
     func getMessages(pubKey: String, sequence: Int? = nil, completion: @escaping(O3APIClientResult<[Message]>) -> Void) {
         let endpoint = "/\(O3KeychainManager.getO3PubKey()!)/notifications"
         
-        let fullURL = "https://inbox.o3.network/api/v1" + endpoint
+        let fullURL = "https://inbox.testo3.net/api/v1" + endpoint
         var params = [String: String]()
         if sequence != nil {
             params = ["sequence": String(sequence!)]

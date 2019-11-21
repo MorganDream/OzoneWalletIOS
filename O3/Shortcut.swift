@@ -9,10 +9,10 @@
 import UIKit
 
 enum ShortcutTypes: String {
-    case send = "network.o3.app.default.actions.send"
-    case receive = "network.o3.app.default.actions.receive"
-    case apps = "network.o3.app.default.screens.apps"
-    case news = "network.o3.app.default.screens.news"
+    case send = "network.o3app.net.default.actions.send"
+    case receive = "network.o3app.net.default.actions.receive"
+    case apps = "network.o3app.net.default.screens.apps"
+    case news = "network.o3app.net.default.screens.news"
 }
 
 

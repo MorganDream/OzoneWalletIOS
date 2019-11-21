@@ -38,8 +38,8 @@ public enum O3APIClientResult<T> {
 
 class O3APIClient: NSObject {
 
-    public var apiBaseEndpoint = "https://platform.o3.network/api"
-    public var apiWithCacheBaseEndpoint = "https://api.o3.network"
+    public var apiBaseEndpoint = "https://platform.testo3.net/api"
+    public var apiWithCacheBaseEndpoint = "https://api.testo3.net"
     public var network: Network = .main
 
     public var useCache: Bool = false

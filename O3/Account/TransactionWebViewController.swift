@@ -27,9 +27,9 @@ class TransactionWebViewController: UIViewController, WKUIDelegate {
         var urlString = ""
         if transaction.blockchain == "neo" {
             if AppState.network == .test {
-                urlString = "https://testnet-explorer.o3.network/transactions/" + transaction.txid
+                urlString = "https://testnet-explorer.testo3.net/transactions/" + transaction.txid
             } else {
-                urlString = "https://explorer.o3.network/transactions/" + transaction.txid
+                urlString = "https://explorer.testo3.net/transactions/" + transaction.txid
             }
         } else if transaction.blockchain == "ontology" {
             if AppState.network == .test {

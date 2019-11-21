@@ -227,7 +227,7 @@ extension SendWhatTableViewController: AssetSelectorDelegate {
             self.selectedAsset = selected
             self.selectedAssetLabel.text = selected.symbol
             self.selectedAssetBalance.text = selected.value.string(selected.decimals, removeTrailing: true)
-            let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", selected.symbol.uppercased())
+            let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", selected.symbol.uppercased())
             self.selectedAssetIcon?.kf.setImage(with: URL(string: imageURL))
         }
     }

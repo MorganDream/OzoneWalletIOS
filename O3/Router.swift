@@ -87,7 +87,7 @@ class Router: NSObject {
         switch url.host {
         case "dapp":
             var dappurl = URLComponents(string: url.absoluteString)?.queryItems?.filter({$0.name == "url"}).first?.value!
-            Controller().openDappBrowserV2(url: URL(string: dappurl ?? "www.o3.network")!)
+            Controller().openDappBrowserV2(url: URL(string: dappurl ?? "www.testo3.net")!)
         default:
             return
         }

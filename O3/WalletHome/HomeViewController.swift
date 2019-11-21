@@ -435,12 +435,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func buyNeoButtonTapped() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let buyWithFiat = UIAlertAction(title: "With Fiat", style: .default) { _ in
-            Controller().openDappBrowserV2(url: URL(string: "https://buy.o3.network/?a=" + (Authenticated.wallet?.address)!)!)
+            Controller().openDappBrowserV2(url: URL(string: "https://buy.testo3.net/?a=" + (Authenticated.wallet?.address)!)!)
         }
         actionSheet.addAction(buyWithFiat)
         
         let buyWithCrypto = UIAlertAction(title: "With Crypto", style: .default) { _ in
-            Controller().openDappBrowserV2(url: URL(string: "https://swap.o3.app")!)
+            Controller().openDappBrowserV2(url: URL(string: "https://swap.o3app.net")!)
         }
         actionSheet.addAction(buyWithCrypto)
         

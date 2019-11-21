@@ -39,7 +39,7 @@ public class O3Client {
         case getPortfolioValue = "/v1/historical"
         case getAccountValue = "/v1/value"
         case getNewsFeed = "/v1/feed/"
-        case getTokenSales = "https://platform.o3.network/api/v1/neo/tokensales"
+        case getTokenSales = "https://platform.testo3.net/api/v1/neo/tokensales"
     }
 
     enum HTTPMethod: String {
@@ -47,7 +47,7 @@ public class O3Client {
         case POST
     }
 
-    var baseURL = "https://api.o3.network"
+    var baseURL = "https://api.testo3.net"
 
     public static let shared = O3Client()
 
@@ -174,12 +174,12 @@ public class O3Client {
     }
 
     func getFeatures(completion: @escaping(O3ClientResult<FeatureFeed>) -> Void) {
-        var endpoint = "https://platform.o3.network/api/v1/neo/news/featured"
+        var endpoint = "https://platform.testo3.net/api/v1/neo/news/featured"
         #if TESTNET
-        endpoint = "https://platform.o3.network/api/v1/neo/news/featured?network=test"
+        endpoint = "https://platform.testo3.net/api/v1/neo/news/featured?network=test"
         #endif
         #if PRIVATENET
-        endpoint = "https://platform.o3.network/api/v1/neo/news/featured?network=private"
+        endpoint = "https://platform.testo3.net/api/v1/neo/news/featured?network=private"
         #endif
         sendRequest(endpoint, method: .GET, data: nil, noBaseURL: true) { result in
             switch result {
@@ -199,12 +199,12 @@ public class O3Client {
     }
 
     func getAssetsForMarketPlace(completion: @escaping(O3ClientResult<[Asset]>) -> Void) {
-        var endpoint = "https://api.o3.network/v1/marketplace"
+        var endpoint = "https://api.testo3.net/v1/marketplace"
         #if TESTNET
-        endpoint = "https://api.o3.network/v1/marketplace?network=test"
+        endpoint = "https://api.testo3.net/v1/marketplace?network=test"
         #endif
         #if PRIVATENET
-        endpoint = "https://api.o3.network/v1/marketplace?network=private"
+        endpoint = "https://api.testo3.net/v1/marketplace?network=private"
         #endif
 
         sendRequest(endpoint, method: .GET, data: nil, noBaseURL: true) { result in
@@ -236,12 +236,12 @@ public class O3Client {
     }
 
     func getTokens(completion: @escaping(O3ClientResult<[NEP5Token]>) -> Void) {
-        var endpoint = "https://platform.o3.network/api/v1/neo/nep5"
+        var endpoint = "https://platform.testo3.net/api/v1/neo/nep5"
         #if TESTNET
-        endpoint = "https://platform.o3.network/api/v1/neo/nep5?network=test"
+        endpoint = "https://platform.testo3.net/api/v1/neo/nep5?network=test"
         #endif
         #if PRIVATENET
-        endpoint = "https://platform.o3.network/api/v1/neo/nep5?network=private"
+        endpoint = "https://platform.testo3.net/api/v1/neo/nep5?network=private"
         #endif
 
         sendRequest(endpoint, method: .GET, data: nil, noBaseURL: true) { result in
@@ -262,12 +262,12 @@ public class O3Client {
     }
 
     func getTokenSales(address: String, completion: @escaping(O3ClientResult<TokenSales>) -> Void) {
-        var endpoint = "https://platform.o3.network/api/v1/neo/" + address + "/tokensales"
+        var endpoint = "https://platform.testo3.net/api/v1/neo/" + address + "/tokensales"
         #if TESTNET
-        endpoint = "https://platform.o3.network/api/v1/neo/" + address + "/tokensales?network=test"
+        endpoint = "https://platform.testo3.net/api/v1/neo/" + address + "/tokensales?network=test"
         #endif
         #if PRIVATENET
-        endpoint = "https://platform.o3.network/api/v1/neo/" + address + "/tokensales?network=private"
+        endpoint = "https://platform.testo3.net/api/v1/neo/" + address + "/tokensales?network=private"
         #endif
         sendRequest(endpoint, method: .GET, data: nil, noBaseURL: true) { result in
             switch result {
@@ -285,12 +285,12 @@ public class O3Client {
     }
 
     func getUnboundOng(address: String, completion: @escaping(O3ClientResult<UnboundOng>) -> Void) {
-        var endpoint = "https://platform.o3.network/api/v1/ont/" + address + "/unboundong"
+        var endpoint = "https://platform.testo3.net/api/v1/ont/" + address + "/unboundong"
         #if TESTNET
-        endpoint = "https://platform.o3.network/api/v1/ont/" + address + "/unboundong?network=test"
+        endpoint = "https://platform.testo3.net/api/v1/ont/" + address + "/unboundong?network=test"
         #endif
         #if PRIVATENET
-        endpoint = "https://platform.o3.network/api/v1/ont/" + address + "/unboundong?network=private"
+        endpoint = "https://platform.testo3.net/api/v1/ont/" + address + "/unboundong?network=private"
         #endif
         sendRequest(endpoint, method: .GET, data: nil, noBaseURL: true) { result in
             switch result {

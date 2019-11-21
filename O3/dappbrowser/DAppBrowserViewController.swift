@@ -172,7 +172,7 @@ class DAppBrowserViewController: UIViewController {
             return
         }
         var req = URLRequest(url: url!)
-        if (url?.absoluteString.hasPrefix("https://public.o3.network")) == true {
+        if (url?.absoluteString.hasPrefix("https://public.testo3.net")) == true {
             let queryItems = [NSURLQueryItem(name: "theme", value: UserDefaultsManager.themeIndex == 0 ? "light" : "dark")]
             let urlComps = NSURLComponents(url: url!, resolvingAgainstBaseURL: false)!
             urlComps.queryItems = queryItems as [URLQueryItem]
@@ -241,7 +241,7 @@ class DAppBrowserViewController: UIViewController {
     }
     
     func share() {
-        let shareURL = URL(string: "https://o3.network/")
+        let shareURL = URL(string: "https://testo3.net/")
         let activityViewController = UIActivityViewController(activityItems: [shareURL as Any], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         
@@ -329,12 +329,12 @@ extension DAppBrowserViewController {
     func showBuyOptionsNEO() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let buyWithFiat = UIAlertAction(title: "With Fiat", style: .default) { _ in
-            Controller().openDappBrowserV2(url: URL(string: "https://buy.o3.network/?a=" + (Authenticated.wallet?.address)!)!)
+            Controller().openDappBrowserV2(url: URL(string: "https://buy.testo3.net/?a=" + (Authenticated.wallet?.address)!)!)
         }
         actionSheet.addAction(buyWithFiat)
         
         let buyWithCrypto = UIAlertAction(title: "With Crypto", style: .default) { _ in
-            Controller().openDappBrowserV2(url: URL(string: "https://swap.o3.app")!)
+            Controller().openDappBrowserV2(url: URL(string: "https://swap.o3app.net")!)
         }
         actionSheet.addAction(buyWithCrypto)
         
@@ -576,7 +576,7 @@ extension DAppBrowserViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if navigationAction.navigationType == .linkActivated {
             if let url = navigationAction.request.url,
-                let host = url.host, host.hasPrefix("o3.network"),
+                let host = url.host, host.hasPrefix("testo3.net"),
                 UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url)
                 print(url)
@@ -585,7 +585,7 @@ extension DAppBrowserViewController: WKNavigationDelegate {
             } else if let url = navigationAction.request.url,
                 let host = url.host, host.hasPrefix("switcheo.exchange") {
                 DispatchQueue.main.async {
-                    let redirectURL = URL(string: String(format: "https://analytics.o3.network/redirect/?url=%@", url.absoluteString))
+                    let redirectURL = URL(string: String(format: "https://analytics.testo3.net/redirect/?url=%@", url.absoluteString))
                     Controller().openDappBrowser(url: redirectURL!, modal: true)
                 }
                 decisionHandler(.cancel)

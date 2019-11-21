@@ -217,7 +217,7 @@ class SendRequestTableViewController: UITableViewController {
                 cell.keyLabel.text = String(format:"%@", "Total")
                 cell.valueLabel.text = String(format:"%@", info.value)
                 if let r = info.data as? dAppProtocol.SendRequest {
-                    let imageURL = String(format: "https://cdn.o3.network/img/neo/%@.png", r.asset.uppercased())
+                    let imageURL = String(format: "https://cdn.testo3.net/img/neo/%@.png", r.asset.uppercased())
                     cell.iconImageView?.kf.setImage(with: URL(string: imageURL))
                 }
                 

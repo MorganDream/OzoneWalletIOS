@@ -26,7 +26,7 @@ class ReferralLinkViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
-        let shareURL = URL(string: "https://buy.o3.network/?ref=" + Authenticated.wallet!.address)
+        let shareURL = URL(string: "https://buy.testo3.net/?ref=" + Authenticated.wallet!.address)
         let activityViewController = UIActivityViewController(activityItems: [shareURL as Any], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
@@ -59,7 +59,7 @@ class ReferralLinkViewController: UIViewController, UITextFieldDelegate {
         learnMoreButton.setTitle("Learn more here", for: UIControl.State())
         referralLinkHeaderLabel.text = "Your referral link"
         shareButton.setTitle("Share", for: UIControl.State())
-        referralInputField.text = "https://buy.o3.network/?ref=" + Authenticated.wallet!.address
+        referralInputField.text = "https://buy.testo3.net/?ref=" + Authenticated.wallet!.address
         referralInputField.inputView = UIView()   //prevents keyboard
         referralInputField.tintColor = .clear
         

@@ -109,7 +109,7 @@ extension HomeViewController {
             if o3NativeAsset.assetType == O3WalletNativeAsset.AssetType.ontologyAsset {
                 chain = "ont"
             }
-            urlString = String(format: "https://o3.app/assets/%@/%@", chain, asset.symbol)
+            urlString = String(format: "https://o3app.net/assets/%@/%@", chain, asset.symbol)
         } else {
             urlString = "https://www.coinbase.com/price/\(asset.name.lowercased())"
         }

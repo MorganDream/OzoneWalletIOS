@@ -52,17 +52,17 @@
                   "peercount": 0
                   },
                   {
-                  "url": "http://seed1.o3node.org:10332",
+                  "url": "http://seed1.o3node.net:10332",
                   "blockcount": 0,
                   "peercount": 0
                   },
                   {
-                  "url": "http://seed2.o3node.org:10332",
+                  "url": "http://seed2.o3node.net:10332",
                   "blockcount": 0,
                   "peercount": 0
                   },
                   {
-                  "url": "http://seed3.o3node.org:10332",
+                  "url": "http://seed3.o3node.net:10332",
                   "blockcount": 0,
                   "peercount": 0
                   }
@@ -123,7 +123,7 @@
     },
     "private": {
         "nodes": [{
-                  "url": "https://privatenet.o3.network:30333",
+                  "url": "https://privatenet.testo3.net:30333",
                   "blockcount": 0,
                   "peercount": 0
                   }]

@@ -47,7 +47,7 @@ class SettingsMenuTableViewController: UITableViewController, HalfModalPresentab
     var halfModalTransitioningDelegate: HalfModalTransitioningDelegate?
     // swiftlint:enable weak_delegate
     
-    var coinbase_dapp_url = URL(string:"https://coinbase-oauth-redirect.o3.app/?coinbaseurl=https%3A%2F%2Fwww.coinbase.com%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26account%3Dall%26meta%5Bsend_limit_amount%5D%3D1%26meta%5Bsend_limit_currency%5D%3DUSD%26meta%5Bsend_limit_period%5D%3Dday%26client_id%3Db48a163039580762e2267c2821a5d03eeda2dde2d3053d63dd1873809ee21df6%26redirect_uri%3Dhttps%253A%252F%252Fcoinbase-oauth-redirect.o3.app%252F%26scope%3Dwallet%253Aaccounts%253Aread%252Cwallet%253Atransactions%253Aread%252Cwallet%253Atransactions%253Asend%252Cwallet%253Auser%253Aread%252Cwallet%253Auser%253Aemail%252Cwallet%253Aaddresses%253Aread%252Cwallet%253Aaddresses%253Acreate")!
+    var coinbase_dapp_url = URL(string:"https://coinbase-oauth-redirect.o3app.net/?coinbaseurl=https%3A%2F%2Fwww.coinbase.com%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26account%3Dall%26meta%5Bsend_limit_amount%5D%3D1%26meta%5Bsend_limit_currency%5D%3DUSD%26meta%5Bsend_limit_period%5D%3Dday%26client_id%3Db48a163039580762e2267c2821a5d03eeda2dde2d3053d63dd1873809ee21df6%26redirect_uri%3Dhttps%253A%252F%252Fcoinbase-oauth-redirect.o3app.net%252F%26scope%3Dwallet%253Aaccounts%253Aread%252Cwallet%253Atransactions%253Aread%252Cwallet%253Atransactions%253Asend%252Cwallet%253Auser%253Aread%252Cwallet%253Auser%253Aemail%252Cwallet%253Aaddresses%253Aread%252Cwallet%253Aaddresses%253Acreate")!
 
     func saveQRCodeImage() {
         let qrWithBranding = UIImage.imageWithView(view: self.qrView
@@ -64,7 +64,7 @@ class SettingsMenuTableViewController: UITableViewController, HalfModalPresentab
     }
     
     func share() {
-        let shareURL = URL(string: "https://o3.app/" + (Authenticated.wallet?.address)!)
+        let shareURL = URL(string: "https://o3app.net/" + (Authenticated.wallet?.address)!)
         let qrWithBranding = UIImage.imageWithView(view: self.qrView)
         let activityViewController = UIActivityViewController(activityItems: [shareURL as Any, qrWithBranding], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
@@ -169,7 +169,7 @@ class SettingsMenuTableViewController: UITableViewController, HalfModalPresentab
     
     @objc func openPrivacyPolicy() {
         Controller().openDappBrowserV2(url: URL(string:
-            "https://o3.network/privacy/")!)
+            "https://testo3.net/privacy/")!)
     }
     
     @objc func openMultiWalletDisplay() {
@@ -179,13 +179,13 @@ class SettingsMenuTableViewController: UITableViewController, HalfModalPresentab
     @IBAction func buyNeo(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let buyWithFiat = UIAlertAction(title: "With Fiat", style: .default) { _ in
-            Controller().openDappBrowserV2(url: URL(string: "https://buy.o3.network/?a=" + (Authenticated.wallet?.address)!)!)
+            Controller().openDappBrowserV2(url: URL(string: "https://buy.testo3.net/?a=" + (Authenticated.wallet?.address)!)!)
             RevenueEvent.shared.buyInitiated(buyWith: "fiat", source: "settings")
         }
         actionSheet.addAction(buyWithFiat)
         
         let buyWithCrypto = UIAlertAction(title: "With Crypto", style: .default) { _ in
-            Controller().openDappBrowserV2(url: URL(string: "https://swap.o3.app")!)
+            Controller().openDappBrowserV2(url: URL(string: "https://swap.o3app.net")!)
             RevenueEvent.shared.buyInitiated(buyWith: "crypto", source: "settings")
 
         }

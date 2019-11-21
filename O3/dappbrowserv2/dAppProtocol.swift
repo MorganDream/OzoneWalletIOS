@@ -361,7 +361,7 @@ class O3DappAPI {
     }
     
     func invoke(request: dAppProtocol.InvokeRequest) -> dAppProtocol.InvokeResponse {
-        return dAppProtocol.InvokeResponse(txid: "implement this", nodeUrl: "https://o3.network")
+        return dAppProtocol.InvokeResponse(txid: "implement this", nodeUrl: "https://testo3.net")
     }
     
     func getBalance(request: dAppProtocol.RequestData<[dAppProtocol.GetBalanceRequest]>) -> dAppProtocol.GetBalanceResponse {
